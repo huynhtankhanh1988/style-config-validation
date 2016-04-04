@@ -1,0 +1,16 @@
+{
+  "name": "ap-is-style-config",
+  "version": "1.0.0",
+  "description": "**This example of Style Config APIs**",
+  "main": "index.js",
+  "keywords": [
+    "swagger"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "connect": "^3.2.0",
+    "js-yaml": "^3.3.0",
+    "swagger-tools": "0.10.1"
+  }
+}

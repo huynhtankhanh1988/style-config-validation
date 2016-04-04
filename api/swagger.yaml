@@ -1,0 +1,173 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Style Config APIs
+  description: |
+    **This example of Style Config APIs**
+host: next.managekcbd.manageddev1.worldnow.com:3000
+basePath: /classes
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+tags:
+  -
+    name: "StyleConfig"
+    description: All about Style Config
+paths:
+  /StyleConfig:
+    get:
+      tags:
+        - "StyleConfig"
+      parameters:
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      - name: where
+        in: query
+        description: Query string.
+        type: string
+        required: true
+      responses:
+        200:
+          description: List all Style Config.
+          schema:
+            title: StyleConfigs
+            type: array
+            items:
+              $ref: '#/definitions/Style'
+    post:
+      tags:
+        - "StyleConfig"
+      parameters:
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      - name: StyleConfig
+        in: body
+        description: The Style Config JSON that you want to POST
+        schema:
+          $ref: '#/definitions/Style'
+        required: true
+      responses:
+        200:
+          description: Create a new Style Config successfully!
+        500:
+          description: Server error.
+  /StyleConfig/{objectId}:
+    get:
+      tags:
+        - "StyleConfig"
+      parameters:
+      - name: objectId
+        in: path
+        description: id shout to be get
+        type: string
+        required: true
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      - name: where
+        in: query
+        description: Query string.
+        type: string
+        required: true
+      responses:
+        200:
+          description: Get one Style Config.
+          schema:
+            $ref: '#/definitions/Style'
+        404:
+          description: Object not found.
+    put:
+      tags:
+        - "StyleConfig"
+      parameters:
+      - name: objectId
+        in: path
+        description: The object Id need to be update
+        required: true
+        type: string
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      - name: StyleConfig
+        in: body
+        description: The Style Config JSON that you want to PUT
+        schema:
+          $ref: '#/definitions/Style'
+        required: true
+      responses:
+        200:
+          description: Updates the Style Config successfully!
+        500:
+          description: Server error.
+    delete:
+      tags:
+        - "StyleConfig"
+      parameters:
+      - name: objectId
+        in: path
+        description: The object Id need to be deleted
+        required: true
+        type: string
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      responses:
+        200:
+          description: Delete the Style Config successfully!
+        404:
+          description: Object not found.
+definitions:
+  Style:
+    type: object
+    required:
+      - affiliateId
+    properties:
+      affiliateId:
+        type: string
+        maxLength: 255
+      fgColor1:
+        type: string
+        pattern: ^[A-Fa-f0-9]{6}$
+      fgColor2:
+        type: string
+        pattern: ^[A-Fa-f0-9]{6}$
+      bgColor1:
+        type: string
+        pattern: ^[A-Fa-f0-9]{6}$
+      bgColor2:
+        type: string
+        pattern: ^[A-Fa-f0-9]{6}$
+      breakingNewsColor:
+        type: string
+        pattern: ^[A-Fa-f0-9]{6}$
+      font1:
+        type: string
+        maxLength: 255
+      headerFontColor:
+        type: string
+        pattern: ^[A-Fa-f0-9]{6}$
+      weatherForegroundColor:
+        type: string
+        pattern: ^[A-Fa-f0-9]{6}$
+      weatherBackgroundColor:
+        type: string
+        pattern: ^[A-Fa-f0-9]{6}$
+      name:
+        type: string
+        maxLength: 255

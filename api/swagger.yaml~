@@ -1,0 +1,156 @@
+---
+swagger: "2.0"
+info:
+  description: "**This example of Style Config APIs**\n"
+  version: "1.0.0"
+  title: "APIs_Style_Config"
+host: "next.managekcbd.manageddev1.worldnow.com:3000"
+basePath: "/classes"
+tags:
+- name: "StyleConfig"
+  description: "All about style config"
+schemes:
+- "http"
+- "https"
+consumes:
+- "application/json"
+- "text/xml"
+produces:
+- "application/json"
+- "text/html"
+paths:
+  /StyleConfig:
+    get:
+      tags:
+      - "StyleConfig"
+      operationId: "styleConfigGET"
+      parameters:
+      - name: "token"
+        in: "header"
+        description: "Token to pass authentication"
+        required: false
+        type: "string"
+      - name: "where"
+        in: "query"
+        description: "Query string."
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "List all Style Config"
+          schema:
+            type: "array"
+            title: "StyleConfigs"
+            items:
+              $ref: "#/definitions/Style"
+      x-swagger-router-controller: "StyleConfig"
+    post:
+      tags:
+      - "StyleConfig"
+      operationId: "styleConfigPOST"
+      parameters:
+      - name: "token"
+        in: "header"
+        description: "Token to pass authentication"
+        required: false
+        type: "string"
+      - in: "body"
+        name: "StyleConfig"
+        description: "The Style Config JSON you want to post"
+        required: true
+        schema:
+          $ref: "#/definitions/Style"
+      responses:
+        200:
+          description: "Create a new Style Config"
+        405:
+          description: "Invalid input"
+      x-swagger-router-controller: "StyleConfig"
+  /StyleConfig/{id}:
+    put:
+      tags:
+      - "StyleConfig"
+      operationId: "styleConfigIdPUT"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "The object Id need to be update"
+        required: true
+        type: "string"
+      - name: "token"
+        in: "header"
+        description: "Token to pass authentication"
+        required: false
+        type: "string"
+      - in: "body"
+        name: "StyleConfig"
+        description: "The Style Config JSON you want to post"
+        required: true
+        schema:
+          $ref: "#/definitions/Style"
+      responses:
+        200:
+          description: "Updates the Style Config"
+        404:
+          description: "Object not found"
+      x-swagger-router-controller: "StyleConfig"
+    delete:
+      tags:
+      - "StyleConfig"
+      operationId: "styleConfigIdDELETE"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "The object Id need to be deleted"
+        required: true
+        type: "string"
+      - name: "token"
+        in: "header"
+        description: "Token to pass authentication"
+        required: false
+        type: "string"
+      responses:
+        200:
+          description: "Delete the Style Config"
+        404:
+          description: "Object not found"
+      x-swagger-router-controller: "StyleConfig"
+definitions:
+  Style:
+    type: "object"
+    required:
+    - "affiliateId"
+    properties:
+      affiliateId:
+        type: "string"
+        maxLength: 255
+      fgColor1:
+        type: "string"
+        pattern: "^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+      fgColor2:
+        type: "string"
+        pattern: "^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+      bgColor1:
+        type: "string"
+        pattern: "^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+      bgColor2:
+        type: "string"
+        pattern: "^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+      breakingNewsColor:
+        type: "string"
+        pattern: "^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+      font1:
+        type: "string"
+        maxLength: 255
+      headerFontColor:
+        type: "string"
+        pattern: "^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+      weatherForegroundColor:
+        type: "string"
+        pattern: "^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+      weatherBackgroundColor:
+        type: "string"
+        pattern: "^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+      name:
+        type: "string"
+        maxLength: 255
