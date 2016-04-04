@@ -18,10 +18,6 @@ node .
 To view the Swagger UI interface:
 
 ```
-Example:
-- cms token: d%2FQaJ0V8apyPyD4i1%2BMwgNcBCZ6WbATA%2FAoInGmHbRD6RHuPdw6amMOfo%2BJWdK17MwB4rdlhB4rBcIAJgmWsCJFwpqiltMTVc8Yp8OIAuGoIVz6ctJ4GvGaqjNDg6bOJAGjXRZ9TxzI9VRUVhD52Qw%3D%3D
-- affiliate: 69
-
 open http://localhost:8088/docs
 ```
 
