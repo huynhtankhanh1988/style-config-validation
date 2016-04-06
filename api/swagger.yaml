@@ -4,7 +4,7 @@ info:
   title: Style Config APIs
   description: |
     **This example of Style Config APIs**
-host: next.managewnow.manageddev1.worldnow.com:4000
+host: next.managewnow.manageddev1.worldnow.com:3000
 basePath: /classes
 schemes:
   - http
