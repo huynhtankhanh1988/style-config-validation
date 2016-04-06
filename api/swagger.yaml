@@ -17,6 +17,15 @@ tags:
   -
     name: "StyleConfig"
     description: All about Style Config
+  -
+    name: "SettingConfig"
+    description: All about Setting Config
+  -
+    name: "ItemConfig"
+    description: All about Item Config
+  -
+    name: "MenuConfig"
+    description: All about Menu Config
 paths:
   /StyleConfig:
     get:
@@ -40,7 +49,7 @@ paths:
             title: StyleConfigs
             type: array
             items:
-              $ref: '#/definitions/Style'
+              $ref: '#/definitions/StyleConfig'
     post:
       tags:
         - "StyleConfig"
@@ -54,7 +63,7 @@ paths:
         in: body
         description: The Style Config JSON that you want to POST
         schema:
-          $ref: '#/definitions/Style'
+          $ref: '#/definitions/StyleConfig'
         required: true
       responses:
         200:
@@ -85,7 +94,7 @@ paths:
         200:
           description: Get one Style Config.
           schema:
-            $ref: '#/definitions/Style'
+            $ref: '#/definitions/StyleConfig'
         404:
           description: Object not found.
     put:
@@ -106,7 +115,7 @@ paths:
         in: body
         description: The Style Config JSON that you want to PUT
         schema:
-          $ref: '#/definitions/Style'
+          $ref: '#/definitions/StyleConfig'
         required: true
       responses:
         200:
@@ -132,8 +141,350 @@ paths:
           description: Delete the Style Config successfully!
         404:
           description: Object not found.
+  /SettingConfig:
+    get:
+      tags:
+        - "SettingConfig"
+      parameters:
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      - name: where
+        in: query
+        description: Query string.
+        type: string
+        required: true
+      responses:
+        200:
+          description: List all Setting Configs.
+          schema:
+            title: SettingConfigs
+            type: array
+            items:
+              $ref: '#/definitions/SettingConfig'
+    post:
+      tags:
+        - "SettingConfig"
+      parameters:
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      - name: SettingConfig
+        in: body
+        description: The Setting Config JSON that you want to POST
+        schema:
+          $ref: '#/definitions/SettingConfig'
+        required: true
+      responses:
+        200:
+          description: Create a new Setting Config successfully!
+        500:
+          description: Server error.
+  /SettingConfig/{objectId}:
+    get:
+      tags:
+        - "SettingConfig"
+      parameters:
+      - name: objectId
+        in: path
+        description: id shout to be get
+        type: string
+        required: true
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      - name: where
+        in: query
+        description: Query string.
+        type: string
+        required: true
+      responses:
+        200:
+          description: Get one Setting Config.
+          schema:
+            $ref: '#/definitions/SettingConfig'
+        404:
+          description: Object not found.
+    put:
+      tags:
+        - "SettingConfig"
+      parameters:
+      - name: objectId
+        in: path
+        description: The object Id need to be update
+        required: true
+        type: string
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      - name: SettingConfig
+        in: body
+        description: The Setting Config JSON that you want to PUT
+        schema:
+          $ref: '#/definitions/SettingConfig'
+        required: true
+      responses:
+        200:
+          description: Updates the Setting Config successfully!
+        500:
+          description: Server error.
+    delete:
+      tags:
+        - "SettingConfig"
+      parameters:
+      - name: objectId
+        in: path
+        description: The object Id need to be deleted
+        required: true
+        type: string
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      responses:
+        200:
+          description: Delete the Setting Config successfully!
+        404:
+          description: Object not found.
+  /ItemConfig:
+    get:
+      tags:
+        - "ItemConfig"
+      parameters:
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      - name: where
+        in: query
+        description: Query string.
+        type: string
+        required: true
+      responses:
+        200:
+          description: List all Item Configs.
+          schema:
+            title: ItemConfigs
+            type: array
+            items:
+              $ref: '#/definitions/ItemConfig'
+    post:
+      tags:
+        - "ItemConfig"
+      parameters:
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      - name: ItemConfig
+        in: body
+        description: The Item Config JSON that you want to POST
+        schema:
+          $ref: '#/definitions/ItemConfig'
+        required: true
+      responses:
+        200:
+          description: Create a new Item Config successfully!
+        500:
+          description: Server error.
+  /ItemConfig/{objectId}:
+    get:
+      tags:
+        - "ItemConfig"
+      parameters:
+      - name: objectId
+        in: path
+        description: id shout to be get
+        type: string
+        required: true
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      - name: where
+        in: query
+        description: Query string.
+        type: string
+        required: true
+      responses:
+        200:
+          description: Get one Item Config.
+          schema:
+            $ref: '#/definitions/ItemConfig'
+        404:
+          description: Object not found.
+    put:
+      tags:
+        - "ItemConfig"
+      parameters:
+      - name: objectId
+        in: path
+        description: The object Id need to be update
+        required: true
+        type: string
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      - name: ItemConfig
+        in: body
+        description: The Item Config JSON that you want to PUT
+        schema:
+          $ref: '#/definitions/ItemConfig'
+        required: true
+      responses:
+        200:
+          description: Updates the Item Config successfully!
+        500:
+          description: Server error.
+    delete:
+      tags:
+        - "ItemConfig"
+      parameters:
+      - name: objectId
+        in: path
+        description: The object Id need to be deleted
+        required: true
+        type: string
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      responses:
+        200:
+          description: Delete the Item Config successfully!
+        404:
+          description: Object not found.
+  /MenuConfig:
+    get:
+      tags:
+        - "MenuConfig"
+      parameters:
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      - name: where
+        in: query
+        description: Query string.
+        type: string
+        required: true
+      responses:
+        200:
+          description: List all Menu Configs.
+          schema:
+            title: MenuConfigs
+            type: array
+            items:
+              $ref: '#/definitions/MenuConfig'
+    post:
+      tags:
+        - "MenuConfig"
+      parameters:
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      - name: MenuConfig
+        in: body
+        description: The Menu Config JSON that you want to POST
+        schema:
+          $ref: '#/definitions/MenuConfig'
+        required: true
+      responses:
+        200:
+          description: Create a new Menu Config successfully!
+        500:
+          description: Server error.
+  /MenuConfig/{objectId}:
+    get:
+      tags:
+        - "MenuConfig"
+      parameters:
+      - name: objectId
+        in: path
+        description: id shout to be get
+        type: string
+        required: true
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      - name: where
+        in: query
+        description: Query string.
+        type: string
+        required: true
+      responses:
+        200:
+          description: Get one Menu Config.
+          schema:
+            $ref: '#/definitions/MenuConfig'
+        404:
+          description: Object not found.
+    put:
+      tags:
+        - "MenuConfig"
+      parameters:
+      - name: objectId
+        in: path
+        description: The object Id need to be update
+        required: true
+        type: string
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      - name: MenuConfig
+        in: body
+        description: The Menu Config JSON that you want to PUT
+        schema:
+          $ref: '#/definitions/MenuConfig'
+        required: true
+      responses:
+        200:
+          description: Updates the Menu Config successfully!
+        500:
+          description: Server error.
+    delete:
+      tags:
+        - "MenuConfig"
+      parameters:
+      - name: objectId
+        in: path
+        description: The object Id need to be deleted
+        required: true
+        type: string
+      - name: CMStoken
+        in: header
+        description: Authentication Token
+        type: string
+        required: true
+      responses:
+        200:
+          description: Delete the Menu Config successfully!
+        404:
+          description: Object not found.
 definitions:
-  Style:
+  StyleConfig:
     type: object
     required:
       - affiliateId
@@ -143,31 +494,737 @@ definitions:
         maxLength: 255
       fgColor1:
         type: string
-        pattern: ^[A-Fa-f0-9]{6}$
+        pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       fgColor2:
         type: string
-        pattern: ^[A-Fa-f0-9]{6}$
+        pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       bgColor1:
         type: string
-        pattern: ^[A-Fa-f0-9]{6}$
+        pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       bgColor2:
         type: string
-        pattern: ^[A-Fa-f0-9]{6}$
+        pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       breakingNewsColor:
         type: string
-        pattern: ^[A-Fa-f0-9]{6}$
+        pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       font1:
         type: string
         maxLength: 255
       headerFontColor:
         type: string
-        pattern: ^[A-Fa-f0-9]{6}$
+        pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       weatherForegroundColor:
         type: string
-        pattern: ^[A-Fa-f0-9]{6}$
+        pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       weatherBackgroundColor:
         type: string
-        pattern: ^[A-Fa-f0-9]{6}$
+        pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       name:
         type: string
         maxLength: 255
+  Channel:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          maxLength: 255
+        name:
+          type: string
+          maxLength: 255
+  PremiumFeeds:
+    type: object
+    properties:
+      apiKey:
+        type: string
+        maxLength: 255
+      contextAffiliateId:
+        type: string
+        maxLength: 255
+  PushBehavior:
+    type: object
+    properties:
+      enabled:
+        type: boolean
+      defaultProvider:
+        type: string
+        maxLength: 255
+      parse:
+        type: object
+        properties:
+          appId:
+            type: string
+            maxLength: 255
+          appKey:
+            type: string
+            maxLength: 255
+      urbanAirship:
+        type: object
+        properties:
+          appId:
+            type: string
+            maxLength: 255
+          appKey:
+            type: string
+            maxLength: 255
+          showInbox:
+            type: boolean
+      channels:
+        $ref: '#/definitions/Channel'
+  Analytics:
+    type: object
+    properties:
+      googleAnalyticsId:
+        type: string
+        maxLength: 255
+  Advertising:
+    type: object
+    properties:
+      bannerEnabled:
+        type: boolean
+      network:
+        type: string
+        maxLength: 255
+      networkKey:
+        type: string
+        maxLength: 255
+      autoHideBanner:
+        type: boolean
+      inlineRefresh:
+        type: integer
+      inlineLocation:
+        type: integer
+      inlineEnabled:
+        type: boolean
+      video:
+        type: object
+        properties:
+          VASTUrl:
+            type: string
+            maxLength: 2048
+            pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+          enabled:
+            type: boolean
+          randomNumberParameter:
+            type: string
+            maxLength: 255
+      interstitialAds:
+        type: object
+        properties:
+          enabled:
+            type: boolean
+          placeholderImageUrl:
+            type: string
+            maxLength: 2048
+            pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+          adServer:
+            type: string
+            maxLength: 255
+          adUnitId:
+            type: string
+            maxLength: 255
+          triggerEvent:
+            type: string
+            maxLength: 255
+          showPercentage:
+            type: integer
+            minimum: 0
+            maximum: 100
+          minTimeBetweenAds:
+            type: integer
+          maxTimeBetweenAds:
+            type: integer
+          placeholderTimeout:
+            type: integer
+      recommendation:
+        type: object
+        properties:
+          outbrain:
+            type: object
+            properties:
+              enabled:
+                type: boolean
+              partnerId:
+                type: string
+              outbrainWidgetId:
+                type: string
+  BreakingNews:
+    type: object
+    properties:
+      feedUrl:
+        type: string
+        maxLength: 2048
+        pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+      appVersion:
+        type: string
+      itemsOnHomePage:
+        type: string
+      showAds:
+        type: boolean
+      adTarget:
+        type: string
+        maxLength: 255
+  Weather:
+    type: object
+    properties:
+      general:
+        type: object
+        properties:
+          enabled:
+            type: boolean
+          showAds:
+            type: boolean
+      wsi:
+        type: object
+        properties:
+          memberId:
+            type: string
+            maxLength: 255
+          serviceId:
+            type: string
+            maxLength: 255
+          mapId:
+            type: string
+            maxLength: 255
+          sdkKey:
+            type: string
+            maxLength: 255
+      severeWeather:
+        type: object
+        properties:
+          enabled:
+            type: boolean
+          fgColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+          bgColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+      conditions:
+        type: object
+        properties:
+          basic:
+            type: object
+            properties:
+              enabled:
+                type: boolean
+              fgColor:
+                type: string
+                pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+              bgColor:
+                type: string
+                pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+          detailed:
+            type: object
+            properties:
+              enabled:
+                type: boolean
+              fgColor:
+                type: string
+                pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+              bgColor:
+                type: string
+                pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+              conditions:
+                type: string
+                maxLength: 255
+          sunMoon:
+            type: object
+            properties:
+              enabled:
+                type: boolean
+              fgColor:
+                type: string
+                pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+              bgColor:
+                type: string
+                pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+      textForecast:
+        type: object
+        properties:
+          enabled:
+            type: boolean
+          feedUrl:
+            type: string
+            maxLength: 2048
+            pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+          fgColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+          bgColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+      dailyForecast:
+        type: object
+        properties:
+          enabled:
+            type: boolean
+          feedUrl:
+            type: string
+            maxLength: 2048
+            pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+          fgColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+          bgColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+      hourlyForecast:
+        type: object
+        properties:
+          enabled:
+            type: boolean
+          feedUrl:
+            type: string
+            maxLength: 2048
+            pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+          fgColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+          bgColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+      videoForecast:
+        type: object
+        properties:
+          enabled:
+            type: boolean
+          feedUrl:
+            type: string
+            maxLength: 2048
+            pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+          fgColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+          bgColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+      interactiveRadar:
+        type: object
+        properties:
+          enabled:
+            type: boolean
+          fgColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+          bgColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+      weatherNews:
+        type: object
+        properties:
+          enabled:
+            type: boolean
+          feedUrl:
+            type: string
+            maxLength: 2048
+            pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+          fgColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+          bgColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+      weatherImages:
+        type: object
+        properties:
+          enabled:
+            type: boolean
+          feedUrl:
+            type: string
+            maxLength: 2048
+            pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+          fgColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+          bgColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+      additionalOptions:
+        type: object
+        properties:
+          disableWeatherLinkInBranding:
+            type: boolean
+          hideHilo:
+            type: boolean
+      weatherLocations:
+        type: array
+        items:
+          type: object
+          properties:
+            name:
+              type: string
+              maxLength: 255
+            code:
+              type: string
+              maxLength: 255
+            zipCode:
+              type: string
+              maxLength: 255
+            latitude:
+              type: string
+              maxLength: 255
+            longitude:
+              type: string
+              maxLength: 255
+            altitude:
+              type: string
+              maxLength: 255
+  Traffic:
+    type: object
+    properties:
+      enabled:
+        type: boolean
+      defaultCenterLat:
+        type: string
+        maxLength: 255
+      defaultCenterLong:
+        type: string
+        maxLength: 255
+      defaultAltitude:
+        type: string
+        maxLength: 255
+      defaultOverlays:
+        type: string
+        maxLength: 255
+      defaultLayer:
+        type: string
+        maxLength: 255
+  Connect:
+    type: object
+    properties:
+      newsTipEmail:
+        type: string
+        maxLength: 255
+        pattern: ^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-?[a-zA-Z0-9])*(\.[a-zA-Z](-?[a-zA-Z0-9])*)+$
+      sharePhotoEmail:
+        type: string
+        maxLength: 255
+        pattern: ^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-?[a-zA-Z0-9])*(\.[a-zA-Z](-?[a-zA-Z0-9])*)+$
+      bugReportEmail:
+        type: string
+        maxLength: 255
+        pattern: ^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-?[a-zA-Z0-9])*(\.[a-zA-Z](-?[a-zA-Z0-9])*)+$
+      callUsPhone:
+        type: string
+        maxLength: 20
+        pattern: ^\d{10}$
+      aboutUsUrl:
+        type: string
+        maxLength: 2048
+        pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+      privacyPolicyUrl:
+        type: string
+        maxLength: 2048
+        pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+      tosUrl:
+        type: string
+        maxLength: 2048
+        pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+      facebook:
+        type: object
+        properties:
+          facebookAppId:
+            type: string
+            maxLength: 255
+          facebookSecret:
+            type: string
+            maxLength: 255
+          facebookUsername:
+            type: string
+            maxLength: 255
+      twitterhandle:
+        type: string
+        maxLength: 255
+      instagramUsername:
+        type: string
+        maxLength: 255
+      blogUrl:
+        type: string
+        maxLength: 2048
+        pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+      secondaryBlogUrl:
+        type: string
+        maxLength: 2048
+        pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+      ugcUrl:
+        type: string
+        maxLength: 2048
+        pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+  Video:
+    type: object
+    properties:
+      closedCaptionUrl:
+        type: string
+        maxLength: 2048
+        pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+      liveVideoUrl:
+        type: string
+        maxLength: 2048
+        pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+  StoreAccounts:
+    type: object
+    properties:
+      apple:
+        type: object
+        properties:
+          userId:
+            type: string
+            maxLength: 255
+          password:
+            type: string
+            minLength: 6
+      googlePlay:
+        type: object
+        properties:
+          userId:
+            type: string
+            maxLength: 255
+          password:
+            type: string
+            minLength: 6
+      roku:
+        type: object
+        properties:
+          userId:
+            type: string
+            maxLength: 255
+          password:
+            type: string
+            minLength: 6
+      amazon:
+        type: object
+        properties:
+          userId:
+            type: string
+            maxLength: 255
+          password:
+            type: string
+            minLength: 6
+  ItemConfig:
+    type: object
+    required:
+      - affiliateId
+    properties:
+      affiliateId:
+        type: string
+        maxLength: 255
+      isActive:
+        type: boolean
+      name:
+        type: string
+        maxLength: 255
+      description:
+        type: string
+      appType:
+        type: string
+      platform:
+        type: string
+      theme:
+        type: object
+        properties:
+          fgColor1:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+          fgColor2:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+          bgColor1:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+          bgColor2:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+          breakingNewsColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+          font1:
+            type: string
+            maxLength: 255
+          headerFontColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+          weatherForegroundColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+          weatherBackgroundColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+      setting:
+        type: object
+        properties:
+          premiumFeeds:
+            $ref: '#/definitions/PremiumFeeds'
+          pushBehavior:
+            $ref: '#/definitions/PushBehavior'
+          analytics:
+            $ref: '#/definitions/Analytics'
+          advertising:
+            $ref: '#/definitions/Advertising'
+          breakingNews:
+            $ref: '#/definitions/BreakingNews'
+          weather:
+            $ref: '#/definitions/Weather'
+          traffic:
+            $ref: '#/definitions/Traffic'
+          connect:
+            $ref: '#/definitions/Connect'
+          video:
+            $ref: '#/definitions/Video'
+          storeAccounts:
+            $ref: '#/definitions/StoreAccounts'
+          general:
+            type: object
+            properties:
+              isAllowsEnableApp:
+                type: boolean
+      themeType:
+        type: string
+        maxLength: 255
+      menuId:
+        type: string
+        maxLength: 255
+  SettingConfig:
+    type: object
+    required:
+      - affiliateId
+    properties:
+      affiliateId:
+        type: string
+        maxLength: 255
+      general:
+        type: object
+        properties:
+          availableApps:
+            type: array
+            items:
+              type: string
+              maxLength: 255
+          cmsCustomer:
+            type: boolean
+      premiumFeeds:
+        $ref: '#/definitions/PremiumFeeds'
+      pushBehavior:
+        $ref: '#/definitions/PushBehavior'
+      analytics:
+        $ref: '#/definitions/Analytics'
+      advertising:
+        $ref: '#/definitions/Advertising'
+      breakingNews:
+        $ref: '#/definitions/BreakingNews'
+      video:
+        $ref: '#/definitions/Video'
+      weather:
+        $ref: '#/definitions/Weather'
+      traffic:
+        $ref: '#/definitions/Traffic'
+      connect:
+        $ref: '#/definitions/Connect'
+      storeAccounts:
+        $ref: '#/definitions/StoreAccounts'
+  MenuConfig:
+    type: object
+    properties:
+      affiliateId:
+        type: string
+        maxLength: 255
+      name:
+        type: string
+        maxLength: 255
+      menu:
+        $ref: '#/definitions/MenuItem'
+  MenuItem:
+    type: array
+    items:
+      type: object
+      properties:
+        title:
+          type: string
+          maxLength: 255
+        openInBrowser:
+          type: boolean
+        feed:
+          type : object
+          properties:
+            url:
+              type: string
+              pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+            itemQuerySuffix:
+              type: string
+              maxLength: 255
+        module:
+          type : object
+          properties:
+            weather:
+              type: boolean
+            traffic:
+              type: boolean
+            liveVideo:
+              type: boolean
+        adTarget:
+            type: string
+            maxLength: 255
+        showAds:
+            type: boolean
+        excludeFromPager:
+            type: boolean
+        itemsInHomePage:
+            type: number
+        headerFontColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+        type:
+          type: string
+          maxLength: 255
+        viewLayout:
+          type: string
+          maxLength: 255
+        menu:
+          $ref: '#/definitions/ChildMenuItem'
+  ChildMenuItem:
+    type: array
+    items:
+      type: object
+      properties:
+        title:
+          type: string
+          maxLength: 255
+        openInBrowser:
+          type: boolean
+        feed:
+          type : object
+          properties:
+            url:
+              type: string
+              pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+            itemQuerySuffix:
+              type: string
+              maxLength: 255
+        module:
+          type : object
+          properties:
+            weather:
+              type: boolean
+            traffic:
+              type: boolean
+            liveVideo:
+              type: boolean
+        adTarget:
+            type: string
+            maxLength: 255
+        showAds:
+            type: boolean
+        excludeFromPager:
+            type: boolean
+        itemsInHomePage:
+            type: number
+        headerFontColor:
+            type: string
+            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+        type:
+          type: string
+          maxLength: 255
+        viewLayout:
+          type: string
+          maxLength: 255
