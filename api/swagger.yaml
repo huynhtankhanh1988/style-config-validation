@@ -1,9 +1,9 @@
 swagger: '2.0'
 info:
   version: 1.0.0
-  title: Style Config APIs
+  title: App Management APIs
   description: |
-    **This example of Style Config APIs**
+    **This example of App Management APIs**
 host: next.managewnow.manageddev1.worldnow.com:3000
 basePath: /classes
 schemes:
