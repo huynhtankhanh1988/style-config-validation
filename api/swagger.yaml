@@ -488,6 +488,7 @@ definitions:
     type: object
     required:
       - affiliateId
+    additionalProperties: false
     properties:
       affiliateId:
         type: string
@@ -522,6 +523,12 @@ definitions:
       name:
         type: string
         maxLength: 255
+      objectId:
+        type: string
+      updatedAt:
+        type: string
+      createdAt:
+        type: string
   Channel:
     type: array
     items:
@@ -529,6 +536,7 @@ definitions:
       required:
         - id
         - name
+      additionalProperties: false
       properties:
         id:
           type: string
@@ -538,6 +546,7 @@ definitions:
           maxLength: 255
   PremiumFeeds:
     type: object
+    additionalProperties: false
     properties:
       apiKey:
         type: string
@@ -547,6 +556,7 @@ definitions:
         maxLength: 255
   Search:
     type: object
+    additionalProperties: false
     properties:
       baseUrl:
         type: string
@@ -560,6 +570,7 @@ definitions:
         maxLength: 255
   PushBehavior:
     type: object
+    additionalProperties: false
     properties:
       enabled:
         type: boolean
@@ -593,12 +604,14 @@ definitions:
         $ref: '#/definitions/Channel'
   Analytics:
     type: object
+    additionalProperties: false
     properties:
       googleAnalyticsId:
         type: string
         maxLength: 255
   Advertising:
     type: object
+    additionalProperties: false
     properties:
       bannerEnabled:
         type: boolean
@@ -618,6 +631,7 @@ definitions:
         type: boolean
       video:
         type: object
+        additionalProperties: false
         properties:
           VASTUrl:
             type: string
@@ -630,6 +644,7 @@ definitions:
             maxLength: 255
       interstitialAds:
         type: object
+        additionalProperties: false
         properties:
           enabled:
             type: boolean
@@ -653,6 +668,7 @@ definitions:
             maximum: 10
       recommendation:
         type: object
+        additionalProperties: false
         properties:
           outbrain:
             type: object
@@ -667,6 +683,7 @@ definitions:
                 maxLength: 255
   BreakingNews:
     type: object
+    additionalProperties: false
     properties:
       feedUrl:
         type: string
@@ -685,9 +702,11 @@ definitions:
         maxLength: 255
   Weather:
     type: object
+    additionalProperties: false
     properties:
       general:
         type: object
+        additionalProperties: false
         properties:
           enabled:
             type: boolean
@@ -695,6 +714,7 @@ definitions:
             type: boolean
       wsi:
         type: object
+        additionalProperties: false
         properties:
           memberId:
             type: string
@@ -710,6 +730,7 @@ definitions:
             maxLength: 255
       severeWeather:
         type: object
+        additionalProperties: false
         properties:
           enabled:
             type: boolean
@@ -721,9 +742,11 @@ definitions:
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       conditions:
         type: object
+        additionalProperties: false
         properties:
           basic:
             type: object
+            additionalProperties: false
             properties:
               enabled:
                 type: boolean
@@ -735,6 +758,7 @@ definitions:
                 pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
           detailed:
             type: object
+            additionalProperties: false
             properties:
               enabled:
                 type: boolean
@@ -749,6 +773,7 @@ definitions:
                 maxLength: 255
           sunMoon:
             type: object
+            additionalProperties: false
             properties:
               enabled:
                 type: boolean
@@ -760,6 +785,7 @@ definitions:
                 pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       textForecast:
         type: object
+        additionalProperties: false
         properties:
           enabled:
             type: boolean
@@ -775,6 +801,7 @@ definitions:
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       dailyForecast:
         type: object
+        additionalProperties: false
         properties:
           enabled:
             type: boolean
@@ -790,6 +817,7 @@ definitions:
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       hourlyForecast:
         type: object
+        additionalProperties: false
         properties:
           enabled:
             type: boolean
@@ -805,6 +833,7 @@ definitions:
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       videoForecast:
         type: object
+        additionalProperties: false
         properties:
           enabled:
             type: boolean
@@ -820,6 +849,7 @@ definitions:
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       interactiveRadar:
         type: object
+        additionalProperties: false
         properties:
           enabled:
             type: boolean
@@ -831,6 +861,7 @@ definitions:
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       weatherNews:
         type: object
+        additionalProperties: false
         properties:
           enabled:
             type: boolean
@@ -846,6 +877,7 @@ definitions:
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       weatherImages:
         type: object
+        additionalProperties: false
         properties:
           enabled:
             type: boolean
@@ -861,6 +893,7 @@ definitions:
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       additionalOptions:
         type: object
+        additionalProperties: false
         properties:
           disableWeatherLinkInBranding:
             type: boolean
@@ -870,6 +903,7 @@ definitions:
         type: array
         items:
           type: object
+          additionalProperties: false
           properties:
             name:
               type: string
@@ -889,8 +923,11 @@ definitions:
             altitude:
               type: string
               maxLength: 255
+            isDefault:
+              type: boolean
   Traffic:
     type: object
+    additionalProperties: false
     properties:
       enabled:
         type: boolean
@@ -911,6 +948,7 @@ definitions:
         maxLength: 255
   Connect:
     type: object
+    additionalProperties: false
     properties:
       newsTipEmail:
         type: string
@@ -942,6 +980,7 @@ definitions:
         pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
       facebook:
         type: object
+        additionalProperties: false
         properties:
           facebookAppId:
             type: string
@@ -972,6 +1011,7 @@ definitions:
         pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
   Video:
     type: object
+    additionalProperties: false
     properties:
       closedCaptionUrl:
         type: string
@@ -983,9 +1023,11 @@ definitions:
         pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
   StoreAccounts:
     type: object
+    additionalProperties: false
     properties:
       apple:
         type: object
+        additionalProperties: false
         properties:
           userId:
             type: string
@@ -995,6 +1037,7 @@ definitions:
             minLength: 6
       googlePlay:
         type: object
+        additionalProperties: false
         properties:
           userId:
             type: string
@@ -1004,6 +1047,7 @@ definitions:
             minLength: 6
       roku:
         type: object
+        additionalProperties: false
         properties:
           userId:
             type: string
@@ -1013,6 +1057,7 @@ definitions:
             minLength: 6
       amazon:
         type: object
+        additionalProperties: false
         properties:
           userId:
             type: string
@@ -1022,6 +1067,7 @@ definitions:
             minLength: 6
   ItemConfig:
     type: object
+    additionalProperties: false
     required:
       - affiliateId
       - isActive
@@ -1052,39 +1098,50 @@ definitions:
         maxLength: 255
       theme:
         type: object
+        additionalProperties: false
         properties:
-          fgColor1:
-            type: string
-            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
-          fgColor2:
-            type: string
-            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
-          bgColor1:
-            type: string
-            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
-          bgColor2:
-            type: string
-            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
-          breakingNewsColor:
-            type: string
-            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
-          font1:
+          style:
+            type: object
+            additionalProperties: false
+            properties:
+              fgColor1:
+                type: string
+                pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+              fgColor2:
+                type: string
+                pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+              bgColor1:
+                type: string
+                pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+              bgColor2:
+                type: string
+                pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+              breakingNewsColor:
+                type: string
+                pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+              font1:
+                type: string
+                maxLength: 255
+              headerFontColor:
+                type: string
+                pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+              weatherForegroundColor:
+                type: string
+                pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+              weatherBackgroundColor:
+                type: string
+                pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
+          name:
             type: string
             maxLength: 255
-          headerFontColor:
-            type: string
-            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
-          weatherForegroundColor:
-            type: string
-            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
-          weatherBackgroundColor:
-            type: string
-            pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       setting:
         type: object
+        additionalProperties: false
         properties:
           premiumFeeds:
             $ref: '#/definitions/PremiumFeeds'
+          search:
+            $ref: '#/definitions/Search'
           pushBehavior:
             $ref: '#/definitions/PushBehavior'
           analytics:
@@ -1105,6 +1162,7 @@ definitions:
             $ref: '#/definitions/StoreAccounts'
           general:
             type: object
+            additionalProperties: false
             properties:
               isAllowsEnableApp:
                 type: boolean
@@ -1114,8 +1172,29 @@ definitions:
       menuId:
         type: string
         maxLength: 255
+      objectId:
+        type: string
+      auditTrail:
+        type: object
+        additionalProperties: false
+        properties:
+          creationDate:
+            type: string
+          creationBy:
+            type: string
+          lastEditedDate:
+            type: string
+          lastEditedBy:
+            type: string
+      uniqueAppId:
+        type: string
+      updatedAt:
+        type: string
+      createdAt:
+        type: string
   SettingConfig:
     type: object
+    additionalProperties: false
     required:
       - affiliateId
     properties:
@@ -1124,13 +1203,20 @@ definitions:
         maxLength: 255
       general:
         type: object
+        additionalProperties: false
         properties:
+          affiliateName:
+            type: string
+          affiliateId:
+            type: string
           availableApps:
             type: array
             items:
               type: string
               maxLength: 255
           cmsCustomer:
+            type: boolean
+          isAllowsEnableApp:
             type: boolean
       premiumFeeds:
         $ref: '#/definitions/PremiumFeeds'
@@ -1154,12 +1240,25 @@ definitions:
         $ref: '#/definitions/Connect'
       storeAccounts:
         $ref: '#/definitions/StoreAccounts'
+      objectId:
+        type: string
+      updatedAt:
+        type: string
+      createdAt:
+        type: string
+      createdBy:
+        type: string
+      lastEditedBy:
+        type: string
   MenuConfig:
     type: object
+    additionalProperties: false
     required:
       - affiliateId
       - name
     properties:
+      id:
+        type: number
       affiliateId:
         type: string
         maxLength: 255
@@ -1168,18 +1267,48 @@ definitions:
         maxLength: 255
       menu:
         $ref: '#/definitions/MenuItem'
+      auditTrail:
+        type: object
+        additionalProperties: false
+        properties:
+          creationDate:
+            type: string
+          creationBy:
+            type: string
+          lastEditedDate:
+            type: string
+          lastEditedBy:
+            type: string
+      objectId:
+        type:
+          - string
+          - number
+      updatedAt:
+        type: string
+      createdAt:
+        type: string
   MenuItem:
     type: array
     items:
       type: object
+      additionalProperties: false
       properties:
         title:
           type: string
           maxLength: 255
+        level:
+          type: integer
+        order:
+          type: integer
+        typeFamily:
+          type: string
+        showInVersion:
+          type: string
         openInBrowser:
           type: boolean
         feed:
           type : object
+          additionalProperties: false
           properties:
             url:
               type: string
@@ -1189,6 +1318,7 @@ definitions:
               maxLength: 255
         module:
           type : object
+          additionalProperties: false
           properties:
             weather:
               type: boolean
@@ -1204,7 +1334,7 @@ definitions:
         excludeFromPager:
             type: boolean
         itemsInHomePage:
-            type: number
+            type: integer
         headerFontColor:
             type: string
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
@@ -1214,20 +1344,34 @@ definitions:
         viewLayout:
           type: string
           maxLength: 255
+        categoryNo:
+          type: number
+        categoryType:
+          type: string
         menu:
           $ref: '#/definitions/ChildMenuItem'
   ChildMenuItem:
     type: array
     items:
       type: object
+      additionalProperties: false
       properties:
         title:
           type: string
           maxLength: 255
+        level:
+          type: integer
+        order:
+          type: integer
+        typeFamily:
+          type: string
+        showInVersion:
+          type: string
         openInBrowser:
           type: boolean
         feed:
           type : object
+          additionalProperties: false
           properties:
             url:
               type: string
@@ -1237,6 +1381,7 @@ definitions:
               maxLength: 255
         module:
           type : object
+          additionalProperties: false
           properties:
             weather:
               type: boolean
@@ -1252,7 +1397,7 @@ definitions:
         excludeFromPager:
             type: boolean
         itemsInHomePage:
-            type: number
+            type: integer
         headerFontColor:
             type: string
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
@@ -1262,3 +1407,7 @@ definitions:
         viewLayout:
           type: string
           maxLength: 255
+        categoryNo:
+          type: number
+        categoryType:
+          type: string
