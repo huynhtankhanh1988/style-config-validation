@@ -527,8 +527,10 @@ definitions:
         type: string
       updatedAt:
         type: string
+        format: date-time
       createdAt:
         type: string
+        format: date-time
   Channel:
     type: array
     items:
@@ -564,7 +566,6 @@ definitions:
         pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
       affiliateIds:
         type: string
-        maxLength: 255
       resultCount:
         type: string
         maxLength: 255
@@ -1183,18 +1184,22 @@ definitions:
         properties:
           creationDate:
             type: string
+            format: date-time
           creationBy:
             type: string
           lastEditedDate:
             type: string
+            format: date-time
           lastEditedBy:
             type: string
       uniqueAppId:
         type: string
       updatedAt:
         type: string
+        format: date-time
       createdAt:
         type: string
+        format: date-time
   SettingConfig:
     type: object
     additionalProperties: false
@@ -1247,8 +1252,10 @@ definitions:
         type: string
       updatedAt:
         type: string
+        format: date-time
       createdAt:
         type: string
+        format: date-time
       createdBy:
         type: string
       lastEditedBy:
@@ -1276,10 +1283,12 @@ definitions:
         properties:
           creationDate:
             type: string
+            format: date-time
           creationBy:
             type: string
           lastEditedDate:
             type: string
+            format: date-time
           lastEditedBy:
             type: string
       objectId:
@@ -1288,8 +1297,10 @@ definitions:
           - number
       updatedAt:
         type: string
+        format: date-time
       createdAt:
         type: string
+        format: date-time
   MenuItem:
     type: array
     items:
