@@ -4,7 +4,7 @@ info:
   title: App Management APIs
   description: |
     **This example of App Management APIs**
-host: next.managewnow.manageddev1.worldnow.com:4000
+host: next.managewnow.manageddev1.worldnow.com:5000
 basePath: /classes
 schemes:
   - http
