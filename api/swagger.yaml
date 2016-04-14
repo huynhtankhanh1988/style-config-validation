@@ -3,8 +3,8 @@ info:
   version: 1.0.0
   title: App Management APIs
   description: |
-    **This example of App Management APIs**
-host: next.managewnow.manageddev1.worldnow.com:5000
+    **These examples of App Management APIs**
+host: next.managewnow.manageddev1.worldnow.com:8443
 basePath: /classes
 schemes:
   - http
@@ -32,14 +32,9 @@ paths:
       tags:
         - "StyleConfig"
       parameters:
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
-        type: string
-        required: true
-      - name: where
-        in: query
-        description: Query string.
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -54,9 +49,9 @@ paths:
       tags:
         - "StyleConfig"
       parameters:
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       - name: StyleConfig
@@ -80,14 +75,9 @@ paths:
         description: id shout to be get
         type: string
         required: true
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
-        type: string
-        required: true
-      - name: where
-        in: query
-        description: Query string.
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -106,9 +96,9 @@ paths:
         description: The object Id need to be update
         required: true
         type: string
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       - name: StyleConfig
@@ -131,9 +121,9 @@ paths:
         description: The object Id need to be deleted
         required: true
         type: string
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -146,14 +136,9 @@ paths:
       tags:
         - "SettingConfig"
       parameters:
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
-        type: string
-        required: true
-      - name: where
-        in: query
-        description: Query string.
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -168,9 +153,9 @@ paths:
       tags:
         - "SettingConfig"
       parameters:
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       - name: SettingConfig
@@ -194,14 +179,9 @@ paths:
         description: id shout to be get
         type: string
         required: true
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
-        type: string
-        required: true
-      - name: where
-        in: query
-        description: Query string.
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -220,9 +200,9 @@ paths:
         description: The object Id need to be update
         required: true
         type: string
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       - name: SettingConfig
@@ -245,9 +225,9 @@ paths:
         description: The object Id need to be deleted
         required: true
         type: string
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -260,14 +240,9 @@ paths:
       tags:
         - "ItemConfig"
       parameters:
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
-        type: string
-        required: true
-      - name: where
-        in: query
-        description: Query string.
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -282,9 +257,9 @@ paths:
       tags:
         - "ItemConfig"
       parameters:
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       - name: ItemConfig
@@ -308,14 +283,9 @@ paths:
         description: id shout to be get
         type: string
         required: true
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
-        type: string
-        required: true
-      - name: where
-        in: query
-        description: Query string.
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -334,9 +304,9 @@ paths:
         description: The object Id need to be update
         required: true
         type: string
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       - name: ItemConfig
@@ -359,9 +329,9 @@ paths:
         description: The object Id need to be deleted
         required: true
         type: string
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -374,14 +344,9 @@ paths:
       tags:
         - "MenuConfig"
       parameters:
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
-        type: string
-        required: true
-      - name: where
-        in: query
-        description: Query string.
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -396,9 +361,9 @@ paths:
       tags:
         - "MenuConfig"
       parameters:
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       - name: MenuConfig
@@ -422,14 +387,9 @@ paths:
         description: id shout to be get
         type: string
         required: true
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
-        type: string
-        required: true
-      - name: where
-        in: query
-        description: Query string.
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -448,9 +408,9 @@ paths:
         description: The object Id need to be update
         required: true
         type: string
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       - name: MenuConfig
@@ -473,9 +433,9 @@ paths:
         description: The object Id need to be deleted
         required: true
         type: string
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
