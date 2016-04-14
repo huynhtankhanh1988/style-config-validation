@@ -4,7 +4,7 @@ info:
   title: App Management APIs
   description: |
     **This example of App Management APIs**
-host: next.managewnow.manageddev1.worldnow.com:4000
+host: localhost:1337
 basePath: /classes
 schemes:
   - http
@@ -32,14 +32,9 @@ paths:
       tags:
         - "StyleConfig"
       parameters:
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
-        type: string
-        required: true
-      - name: where
-        in: query
-        description: Query string.
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -54,9 +49,9 @@ paths:
       tags:
         - "StyleConfig"
       parameters:
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       - name: StyleConfig
@@ -80,14 +75,9 @@ paths:
         description: id shout to be get
         type: string
         required: true
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
-        type: string
-        required: true
-      - name: where
-        in: query
-        description: Query string.
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -106,9 +96,9 @@ paths:
         description: The object Id need to be update
         required: true
         type: string
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       - name: StyleConfig
@@ -131,9 +121,9 @@ paths:
         description: The object Id need to be deleted
         required: true
         type: string
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -146,14 +136,9 @@ paths:
       tags:
         - "SettingConfig"
       parameters:
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
-        type: string
-        required: true
-      - name: where
-        in: query
-        description: Query string.
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -168,9 +153,9 @@ paths:
       tags:
         - "SettingConfig"
       parameters:
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       - name: SettingConfig
@@ -194,14 +179,9 @@ paths:
         description: id shout to be get
         type: string
         required: true
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
-        type: string
-        required: true
-      - name: where
-        in: query
-        description: Query string.
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -220,9 +200,9 @@ paths:
         description: The object Id need to be update
         required: true
         type: string
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       - name: SettingConfig
@@ -245,9 +225,9 @@ paths:
         description: The object Id need to be deleted
         required: true
         type: string
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -260,14 +240,9 @@ paths:
       tags:
         - "ItemConfig"
       parameters:
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
-        type: string
-        required: true
-      - name: where
-        in: query
-        description: Query string.
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -282,9 +257,9 @@ paths:
       tags:
         - "ItemConfig"
       parameters:
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       - name: ItemConfig
@@ -308,14 +283,9 @@ paths:
         description: id shout to be get
         type: string
         required: true
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
-        type: string
-        required: true
-      - name: where
-        in: query
-        description: Query string.
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -334,9 +304,9 @@ paths:
         description: The object Id need to be update
         required: true
         type: string
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       - name: ItemConfig
@@ -359,9 +329,9 @@ paths:
         description: The object Id need to be deleted
         required: true
         type: string
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -374,14 +344,9 @@ paths:
       tags:
         - "MenuConfig"
       parameters:
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
-        type: string
-        required: true
-      - name: where
-        in: query
-        description: Query string.
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -396,9 +361,9 @@ paths:
       tags:
         - "MenuConfig"
       parameters:
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       - name: MenuConfig
@@ -422,14 +387,9 @@ paths:
         description: id shout to be get
         type: string
         required: true
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
-        type: string
-        required: true
-      - name: where
-        in: query
-        description: Query string.
+        description: X-Parse-Application-Id
         type: string
         required: true
       responses:
@@ -448,9 +408,9 @@ paths:
         description: The object Id need to be update
         required: true
         type: string
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
       - name: MenuConfig
@@ -473,11 +433,12 @@ paths:
         description: The object Id need to be deleted
         required: true
         type: string
-      - name: CMStoken
+      - name: X-Parse-Application-Id
         in: header
-        description: Authentication Token
+        description: X-Parse-Application-Id
         type: string
         required: true
+
       responses:
         200:
           description: Delete the Menu Config successfully!
@@ -494,42 +455,58 @@ definitions:
         type: string
         maxLength: 255
       fgColor1:
-        type: string
+        type:
+          - string
+          - "null"
         pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       fgColor2:
-        type: string
+        type:
+          - string
+          - "null"
         pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       bgColor1:
-        type: string
+        type:
+          - string
+          - "null"
         pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       bgColor2:
-        type: string
+        type:
+          - string
+          - "null"
         pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       breakingNewsColor:
-        type: string
+        type:
+          - string
+          - "null"
         pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       font1:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
       headerFontColor:
-        type: string
-        pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
-      weatherForegroundColor:
-        type: string
-        pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
-      weatherBackgroundColor:
-        type: string
+        type:
+          - string
+          - "null"
         pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       name:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
       objectId:
-        type: string
+        type:
+          - string
+          - "null"
       updatedAt:
-        type: string
+        type:
+          - string
+          - "null"
         format: date-time
       createdAt:
-        type: string
+        type:
+          - string
+          - "null"
         format: date-time
   Channel:
     type: array
@@ -551,23 +528,33 @@ definitions:
     additionalProperties: false
     properties:
       apiKey:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
       contextAffiliateId:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
   Search:
     type: object
     additionalProperties: false
     properties:
       baseUrl:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 2048
         pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
       affiliateIds:
-        type: string
+        type:
+          - string
+          - "null"
       resultCount:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
   PushBehavior:
     type: object
@@ -576,32 +563,44 @@ definitions:
       enabled:
         type: boolean
       defaultProvider:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
       parse:
         type: object
         additionalProperties: false
         properties:
           appId:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
           appKey:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
       urbanAirship:
         type: object
         additionalProperties: false
         properties:
           appId:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
           appKey:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
           showInbox:
             type: boolean
           productionAppSecret:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
       channels:
         $ref: '#/definitions/Channel'
@@ -610,7 +609,9 @@ definitions:
     additionalProperties: false
     properties:
       googleAnalyticsId:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
   Advertising:
     type: object
@@ -619,18 +620,28 @@ definitions:
       bannerEnabled:
         type: boolean
       network:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
       networkKey:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
       autoHideBanner:
         type: boolean
       inlineRefresh:
-        type: string
+        type:
+          - string
+          - "null"
+          - integer
         maxLength: 255
       inlineLocation:
-        type: string
+        type:
+          - string
+          - "null"
+          - integer
         maxLength: 255
       inlineEnabled:
         type: boolean
@@ -639,13 +650,17 @@ definitions:
         additionalProperties: false
         properties:
           VASTUrl:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 2048
             pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
           enabled:
             type: boolean
           randomNumberParameter:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
       interstitialAds:
         type: object
@@ -654,10 +669,14 @@ definitions:
           enabled:
             type: boolean
           adServer:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
           adUnitId:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
           minTimeBetweenAds:
             type: integer
@@ -682,29 +701,42 @@ definitions:
               enabled:
                 type: boolean
               partnerId:
-                type: string
+                type:
+                  - string
+                  - "null"
                 maxLength: 255
               outbrainWidgetId:
-                type: string
+                type:
+                  - string
+                  - "null"
                 maxLength: 255
   BreakingNews:
     type: object
     additionalProperties: false
     properties:
       feedUrl:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 2048
         pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
       appVersion:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
       itemsOnHomePage:
-        type: string
+        type:
+          - string
+          - "null"
+          - integer
         maxLength: 255
       showAds:
         type: boolean
       adTarget:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
   Weather:
     type: object
@@ -723,16 +755,24 @@ definitions:
         additionalProperties: false
         properties:
           memberId:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
           serviceId:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
           mapId:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
           sdkKey:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
       severeWeather:
         type: object
@@ -741,10 +781,14 @@ definitions:
           enabled:
             type: boolean
           fgColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
           bgColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       conditions:
         type: object
@@ -757,10 +801,14 @@ definitions:
               enabled:
                 type: boolean
               fgColor:
-                type: string
+                type:
+                  - string
+                  - "null"
                 pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
               bgColor:
-                type: string
+                type:
+                  - string
+                  - "null"
                 pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
           detailed:
             type: object
@@ -769,13 +817,19 @@ definitions:
               enabled:
                 type: boolean
               fgColor:
-                type: string
+                type:
+                  - string
+                  - "null"
                 pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
               bgColor:
-                type: string
+                type:
+                  - string
+                  - "null"
                 pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
               conditions:
-                type: string
+                type:
+                  - string
+                  - "null"
                 maxLength: 255
           sunMoon:
             type: object
@@ -784,10 +838,14 @@ definitions:
               enabled:
                 type: boolean
               fgColor:
-                type: string
+                type:
+                  - string
+                  - "null"
                 pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
               bgColor:
-                type: string
+                type:
+                  - string
+                  - "null"
                 pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       textForecast:
         type: object
@@ -796,14 +854,20 @@ definitions:
           enabled:
             type: boolean
           feedUrl:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 2048
             pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
           fgColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
           bgColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       dailyForecast:
         type: object
@@ -812,14 +876,20 @@ definitions:
           enabled:
             type: boolean
           feedUrl:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 2048
             pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
           fgColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
           bgColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       hourlyForecast:
         type: object
@@ -828,14 +898,20 @@ definitions:
           enabled:
             type: boolean
           feedUrl:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 2048
             pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
           fgColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
           bgColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       videoForecast:
         type: object
@@ -844,14 +920,20 @@ definitions:
           enabled:
             type: boolean
           feedUrl:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 2048
             pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
           fgColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
           bgColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       interactiveRadar:
         type: object
@@ -860,10 +942,14 @@ definitions:
           enabled:
             type: boolean
           fgColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
           bgColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       weatherNews:
         type: object
@@ -872,14 +958,20 @@ definitions:
           enabled:
             type: boolean
           feedUrl:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 2048
             pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
           fgColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
           bgColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       weatherImages:
         type: object
@@ -888,14 +980,20 @@ definitions:
           enabled:
             type: boolean
           feedUrl:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 2048
             pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
           fgColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
           bgColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
       additionalOptions:
         type: object
@@ -912,76 +1010,82 @@ definitions:
           additionalProperties: false
           properties:
             name:
-              type: string
+              type:
+                - string
+                - "null"
               maxLength: 255
             code:
-              type: string
+              type:
+                - string
+                - "null"
               maxLength: 255
             zipCode:
-              type: string
+              type:
+                - string
+                - "null"
+                - integer
               maxLength: 255
             latitude:
-              type: string
+              type:
+                - string
+                - "null"
               maxLength: 255
             longitude:
-              type: string
+              type:
+                - string
+                - "null"
               maxLength: 255
             altitude:
-              type: string
+              type:
+                - string
+                - "null"
               maxLength: 255
             isDefault:
               type: boolean
-  Traffic:
-    type: object
-    additionalProperties: false
-    properties:
-      enabled:
-        type: boolean
-      defaultCenterLat:
-        type: string
-        maxLength: 255
-      defaultCenterLong:
-        type: string
-        maxLength: 255
-      defaultAltitude:
-        type: string
-        maxLength: 255
-      defaultOverlays:
-        type: string
-        maxLength: 255
-      defaultLayer:
-        type: string
-        maxLength: 255
   Connect:
     type: object
     additionalProperties: false
     properties:
       newsTipEmail:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
         pattern: ^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-?[a-zA-Z0-9])*(\.[a-zA-Z](-?[a-zA-Z0-9])*)+$
       sharePhotoEmail:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
         pattern: ^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-?[a-zA-Z0-9])*(\.[a-zA-Z](-?[a-zA-Z0-9])*)+$
       bugReportEmail:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
         pattern: ^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-?[a-zA-Z0-9])*(\.[a-zA-Z](-?[a-zA-Z0-9])*)+$
       callUsPhone:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 20
         pattern: ^\d{10}$
       aboutUsUrl:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 2048
         pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
       privacyPolicyUrl:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 2048
         pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
       tosUrl:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 2048
         pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
       facebook:
@@ -989,30 +1093,46 @@ definitions:
         additionalProperties: false
         properties:
           facebookAppId:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
           facebookSecret:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
           facebookUsername:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
       twitterhandle:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
       instagramUsername:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
       blogUrl:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 2048
         pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
       secondaryBlogUrl:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 2048
         pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
       ugcUrl:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 2048
         pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
   Video:
@@ -1020,11 +1140,15 @@ definitions:
     additionalProperties: false
     properties:
       closedCaptionUrl:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 2048
         pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
       liveVideoUrl:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 2048
         pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
   StoreAccounts:
@@ -1036,40 +1160,56 @@ definitions:
         additionalProperties: false
         properties:
           userId:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
           password:
-            type: string
+            type:
+              - string
+              - "null"
             minLength: 6
       googlePlay:
         type: object
         additionalProperties: false
         properties:
           userId:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
           password:
-            type: string
+            type:
+              - string
+              - "null"
             minLength: 6
       roku:
         type: object
         additionalProperties: false
         properties:
           userId:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
           password:
-            type: string
+            type:
+              - string
+              - "null"
             minLength: 6
       amazon:
         type: object
         additionalProperties: false
         properties:
           userId:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
           password:
-            type: string
+            type:
+              - string
+              - "null"
             minLength: 6
   ItemConfig:
     type: object
@@ -1092,7 +1232,9 @@ definitions:
         type: string
         maxLength: 255
       description:
-        type: string
+        type:
+          - string
+          - "null"
       appType:
         type: string
         maxLength: 255
@@ -1100,10 +1242,14 @@ definitions:
         type: string
         maxLength: 255
       version:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
       theme:
-        type: object
+        type:
+          - object
+          - "null"
         additionalProperties: false
         properties:
           style:
@@ -1111,37 +1257,59 @@ definitions:
             additionalProperties: false
             properties:
               fgColor1:
-                type: string
+                type:
+                  - string
+                  - "null"
                 pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
               fgColor2:
-                type: string
+                type:
+                  - string
+                  - "null"
                 pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
               bgColor1:
-                type: string
+                type:
+                  - string
+                  - "null"
                 pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
               bgColor2:
-                type: string
+                type:
+                  - string
+                  - "null"
                 pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
               breakingNewsColor:
-                type: string
+                type:
+                  - string
+                  - "null"
                 pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
               font1:
-                type: string
+                type:
+                  - string
+                  - "null"
                 maxLength: 255
               headerFontColor:
-                type: string
+                type:
+                  - string
+                  - "null"
                 pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
               weatherForegroundColor:
-                type: string
+                type:
+                  - string
+                  - "null"
                 pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
               weatherBackgroundColor:
-                type: string
+                type:
+                  - string
+                  - "null"
                 pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
           name:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
       setting:
-        type: object
+        type:
+          - object
+          - "null"
         additionalProperties: false
         properties:
           premiumFeeds:
@@ -1158,8 +1326,6 @@ definitions:
             $ref: '#/definitions/BreakingNews'
           weather:
             $ref: '#/definitions/Weather'
-          traffic:
-            $ref: '#/definitions/Traffic'
           connect:
             $ref: '#/definitions/Connect'
           video:
@@ -1173,34 +1339,71 @@ definitions:
               isAllowsEnableApp:
                 type: boolean
       themeType:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
       menuId:
-        type: string
+        type:
+          - string
+          - "null"
         maxLength: 255
+      xmlUrl:
+        type:
+          - string
+          - "null"
+      jsonUrl:
+        type:
+          - string
+          - "null"
       objectId:
-        type: string
+        type:
+          - string
+          - "null"
       auditTrail:
         type: object
         additionalProperties: false
         properties:
           creationDate:
-            type: string
+            type:
+              - string
+              - "null"
             format: date-time
           creationBy:
-            type: string
+            type:
+              - string
+              - "null"
           lastEditedDate:
-            type: string
+            type:
+              - string
+              - "null"
             format: date-time
           lastEditedBy:
-            type: string
+            type:
+              - string
+              - "null"
+          publishBy:
+            type:
+              - string
+              - "null"
+          publishAt:
+            type:
+              - string
+              - "null"
+            format: date-time
       uniqueAppId:
-        type: string
+        type:
+          - string
+          - "null"
       updatedAt:
-        type: string
+        type:
+          - string
+          - "null"
         format: date-time
       createdAt:
-        type: string
+        type:
+          - string
+          - "null"
         format: date-time
   SettingConfig:
     type: object
@@ -1216,13 +1419,19 @@ definitions:
         additionalProperties: false
         properties:
           affiliateName:
-            type: string
+            type:
+              - string
+              - "null"
           affiliateId:
-            type: string
+            type:
+              - string
+              - "null"
           availableApps:
             type: array
             items:
-              type: string
+              type:
+                - string
+                - "null"
               maxLength: 255
           cmsCustomer:
             type: boolean
@@ -1244,24 +1453,32 @@ definitions:
         $ref: '#/definitions/Video'
       weather:
         $ref: '#/definitions/Weather'
-      traffic:
-        $ref: '#/definitions/Traffic'
       connect:
         $ref: '#/definitions/Connect'
       storeAccounts:
         $ref: '#/definitions/StoreAccounts'
       objectId:
-        type: string
+        type:
+          - string
+          - "null"
       updatedAt:
-        type: string
+        type:
+          - string
+          - "null"
         format: date-time
       createdAt:
-        type: string
+        type:
+          - string
+          - "null"
         format: date-time
       createdBy:
-        type: string
+        type:
+          - string
+          - "null"
       lastEditedBy:
-        type: string
+        type:
+          - string
+          - "null"
   MenuConfig:
     type: object
     additionalProperties: false
@@ -1270,6 +1487,8 @@ definitions:
       - name
     properties:
       id:
+        type: number
+      menuid:
         type: number
       affiliateId:
         type: string
@@ -1284,24 +1503,37 @@ definitions:
         additionalProperties: false
         properties:
           creationDate:
-            type: string
+            type:
+              - string
+              - "null"
             format: date-time
           creationBy:
-            type: string
+            type:
+              - string
+              - "null"
           lastEditedDate:
-            type: string
+            type:
+              - string
+              - "null"
             format: date-time
           lastEditedBy:
-            type: string
+            type:
+              - string
+              - "null"
       objectId:
         type:
           - string
           - number
+          - "null"
       updatedAt:
-        type: string
+        type:
+          - string
+          - "null"
         format: date-time
       createdAt:
-        type: string
+        type:
+          - string
+          - "null"
         format: date-time
   MenuItem:
     type: array
@@ -1310,16 +1542,26 @@ definitions:
       additionalProperties: false
       properties:
         title:
-          type: string
+          type:
+            - string
+            - "null"
           maxLength: 255
         level:
-          type: integer
+          type:
+            - integer
+            - "null"
         order:
-          type: integer
+          type:
+            - integer
+            - "null"
         typeFamily:
-          type: string
+          type:
+            - string
+            - "null"
         showInVersion:
-          type: string
+          type:
+            - string
+            - "null"
         openInBrowser:
           type: boolean
         feed:
@@ -1327,10 +1569,19 @@ definitions:
           additionalProperties: false
           properties:
             url:
-              type: string
+              type:
+                - string
+                - "null"
+              pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+            premiumUrl:
+              type:
+                - string
+                - "null"
               pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
             itemQuerySuffix:
-              type: string
+              type:
+                - string
+                - "null"
               maxLength: 255
         module:
           type : object
@@ -1343,27 +1594,45 @@ definitions:
             liveVideo:
               type: boolean
         adTarget:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
         showAds:
             type: boolean
         excludeFromPager:
             type: boolean
         itemsInHomePage:
-            type: integer
+            type:
+              - integer
+              - "null"
         headerFontColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
         type:
-          type: string
+          type:
+            - string
+            - "null"
           maxLength: 255
         viewLayout:
-          type: string
+          type:
+            - string
+            - "null"
           maxLength: 255
         categoryNo:
-          type: number
+          type:
+            - number
+            - "null"
         categoryType:
-          type: string
+          type:
+            - string
+            - "null"
+        categoryPageUrl:
+          type:
+            - string
+            - "null"
         menu:
           $ref: '#/definitions/ChildMenuItem'
   ChildMenuItem:
@@ -1373,16 +1642,26 @@ definitions:
       additionalProperties: false
       properties:
         title:
-          type: string
+          type:
+            - string
+            - "null"
           maxLength: 255
         level:
-          type: integer
+          type:
+            - integer
+            - "null"
         order:
-          type: integer
+          type:
+            - integer
+            - "null"
         typeFamily:
-          type: string
+          type:
+            - string
+            - "null"
         showInVersion:
-          type: string
+          type:
+            - string
+            - "null"
         openInBrowser:
           type: boolean
         feed:
@@ -1390,10 +1669,19 @@ definitions:
           additionalProperties: false
           properties:
             url:
-              type: string
+              type:
+                - string
+                - "null"
+              pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
+            premiumUrl:
+              type:
+                - string
+                - "null"
               pattern: ^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$
             itemQuerySuffix:
-              type: string
+              type:
+                - string
+                - "null"
               maxLength: 255
         module:
           type : object
@@ -1406,24 +1694,42 @@ definitions:
             liveVideo:
               type: boolean
         adTarget:
-            type: string
+            type:
+              - string
+              - "null"
             maxLength: 255
         showAds:
             type: boolean
         excludeFromPager:
             type: boolean
         itemsInHomePage:
-            type: integer
+            type:
+              - integer
+              - "null"
         headerFontColor:
-            type: string
+            type:
+              - string
+              - "null"
             pattern: ^(#[A-Fa-f0-9]{6}|[A-Fa-f0-9]{6})$
         type:
-          type: string
+          type:
+            - string
+            - "null"
           maxLength: 255
         viewLayout:
-          type: string
+          type:
+            - string
+            - "null"
           maxLength: 255
         categoryNo:
-          type: number
+          type:
+            - number
+            - "null"
         categoryType:
-          type: string
+          type:
+            - string
+            - "null"
+        categoryPageUrl:
+          type:
+            - string
+            - "null"
