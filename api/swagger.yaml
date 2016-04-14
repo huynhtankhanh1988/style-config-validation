@@ -3,7 +3,7 @@ info:
   version: 1.0.0
   title: App Management APIs
   description: |
-    **These examples of App Management APIs**
+    **Below are examples of App Management APIs**
 host: next.managewnow.manageddev1.worldnow.com:8443
 basePath: /classes
 schemes:
