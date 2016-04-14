@@ -587,10 +587,14 @@ definitions:
       autoHideBanner:
         type: boolean
       inlineRefresh:
-        type: string
+        type:
+          - string
+          - integer
         maxLength: 255
       inlineLocation:
-        type: string
+        type:
+          - string
+          - integer
         maxLength: 255
       inlineEnabled:
         type: boolean
@@ -659,7 +663,9 @@ definitions:
         type: string
         maxLength: 255
       itemsOnHomePage:
-        type: string
+        type:
+          - string
+          - integer
         maxLength: 255
       showAds:
         type: boolean
@@ -878,7 +884,9 @@ definitions:
               type: string
               maxLength: 255
             zipCode:
-              type: string
+              type:
+                - string
+                - integer
               maxLength: 255
             latitude:
               type: string
@@ -891,27 +899,6 @@ definitions:
               maxLength: 255
             isDefault:
               type: boolean
-  Traffic:
-    type: object
-    additionalProperties: false
-    properties:
-      enabled:
-        type: boolean
-      defaultCenterLat:
-        type: string
-        maxLength: 255
-      defaultCenterLong:
-        type: string
-        maxLength: 255
-      defaultAltitude:
-        type: string
-        maxLength: 255
-      defaultOverlays:
-        type: string
-        maxLength: 255
-      defaultLayer:
-        type: string
-        maxLength: 255
   Connect:
     type: object
     additionalProperties: false
@@ -1118,8 +1105,6 @@ definitions:
             $ref: '#/definitions/BreakingNews'
           weather:
             $ref: '#/definitions/Weather'
-          traffic:
-            $ref: '#/definitions/Traffic'
           connect:
             $ref: '#/definitions/Connect'
           video:
@@ -1138,6 +1123,10 @@ definitions:
       menuId:
         type: string
         maxLength: 255
+      xmlUrl:
+        type: string
+      jsonUrl:
+        type: string
       objectId:
         type: string
       auditTrail:
@@ -1154,6 +1143,11 @@ definitions:
             format: date-time
           lastEditedBy:
             type: string
+          publishBy:
+            type: string
+          publishAt:
+            type: string
+            format: date-time
       uniqueAppId:
         type: string
       updatedAt:
@@ -1204,8 +1198,6 @@ definitions:
         $ref: '#/definitions/Video'
       weather:
         $ref: '#/definitions/Weather'
-      traffic:
-        $ref: '#/definitions/Traffic'
       connect:
         $ref: '#/definitions/Connect'
       storeAccounts:
